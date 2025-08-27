@@ -1,7 +1,14 @@
+# Usa un'immagine Python leggera come base
 FROM python:3.11-slim
+# Set working dir
 WORKDIR /app
+# Copia requirements (se lo hai)
 COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY mock_crm.py .
-EXPOSE 5000
+# Installa le dipendenze
+RUN pip install --no-cache-dir -r requirements.txt
+# Copia il codice
+COPY . .
+# Esponi la porta Flask (5001)
+EXPOSE 5001
+# Comando di avvio
 CMD ["python", "mock_crm.py"]
