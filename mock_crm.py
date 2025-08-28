@@ -189,4 +189,4 @@ if __name__ == '__main__':
     print("- GET /api/customers/<id>/credit-check?amount=X - Check credit availability")
     print("- POST /api/customers/<id>/update-balance - Update customer balance")
     print("- GET /api/transactions - Get all transactions (supports ?customer_id= filter)")
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    app.run(host="0.0.0.0", port=80, debug=True)
