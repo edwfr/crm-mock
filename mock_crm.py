@@ -180,7 +180,7 @@ def get_transactions():
     return jsonify({"transactions": transactions})
 
 if __name__ == '__main__':
-    print("Starting CRM System on port 5001...")
+    print("Starting CRM System on port 80...")
     print("Available endpoints:")
     print("- GET /api/health - Health check")
     print("- GET /api/customers - Get all customers (supports ?search= and ?status= filters)")
